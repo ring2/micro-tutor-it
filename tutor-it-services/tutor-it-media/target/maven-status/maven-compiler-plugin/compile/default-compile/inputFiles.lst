@@ -1,0 +1,16 @@
+E:\micro-tutor-it\tutor-it-services\tutor-it-media\src\main\java\xyz\ring2\tutormedia\controller\MinioController.java
+E:\micro-tutor-it\tutor-it-services\tutor-it-media\src\main\java\xyz\ring2\tutormedia\service\MinioService.java
+E:\micro-tutor-it\tutor-it-services\tutor-it-media\src\main\java\xyz\ring2\tutormedia\TutorMediaApplication.java
+E:\micro-tutor-it\tutor-it-services\tutor-it-media\src\main\java\xyz\ring2\tutormedia\config\MinIoUtils.java
+E:\micro-tutor-it\tutor-it-services\tutor-it-media\src\main\java\xyz\ring2\tutormedia\task\HandleVideoTransCoding.java
+E:\micro-tutor-it\tutor-it-services\tutor-it-media\src\main\java\xyz\ring2\tutormedia\pojo\FileInfo.java
+E:\micro-tutor-it\tutor-it-services\tutor-it-media\src\main\java\xyz\ring2\tutormedia\util\Mp4VideoUtil.java
+E:\micro-tutor-it\tutor-it-services\tutor-it-media\src\main\java\xyz\ring2\tutormedia\util\VideoUtil.java
+E:\micro-tutor-it\tutor-it-services\tutor-it-media\src\main\java\xyz\ring2\tutormedia\service\MediaService.java
+E:\micro-tutor-it\tutor-it-services\tutor-it-media\src\main\java\xyz\ring2\tutormedia\pojo\Chunk.java
+E:\micro-tutor-it\tutor-it-services\tutor-it-media\src\main\java\xyz\ring2\tutormedia\pojo\User.java
+E:\micro-tutor-it\tutor-it-services\tutor-it-media\src\main\java\xyz\ring2\tutormedia\config\MinIoProperties.java
+E:\micro-tutor-it\tutor-it-services\tutor-it-media\src\main\java\xyz\ring2\tutormedia\util\HlsVideoUtil.java
+E:\micro-tutor-it\tutor-it-services\tutor-it-media\src\main\java\xyz\ring2\tutormedia\controller\MediaController.java
+E:\micro-tutor-it\tutor-it-services\tutor-it-media\src\main\java\xyz\ring2\tutormedia\config\GlobalCorsConfig.java
+E:\micro-tutor-it\tutor-it-services\tutor-it-media\src\main\java\xyz\ring2\tutormedia\dao\FileInfoRepository.java

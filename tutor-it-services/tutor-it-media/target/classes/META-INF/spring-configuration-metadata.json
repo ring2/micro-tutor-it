@@ -1,0 +1,32 @@
+{
+  "groups": [
+    {
+      "name": "minio",
+      "type": "xyz.ring2.tutormedia.config.MinIoProperties",
+      "sourceType": "xyz.ring2.tutormedia.config.MinIoProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "minio.access-key",
+      "type": "java.lang.String",
+      "sourceType": "xyz.ring2.tutormedia.config.MinIoProperties"
+    },
+    {
+      "name": "minio.bucket-name",
+      "type": "java.lang.String",
+      "sourceType": "xyz.ring2.tutormedia.config.MinIoProperties"
+    },
+    {
+      "name": "minio.endpoint",
+      "type": "java.lang.String",
+      "sourceType": "xyz.ring2.tutormedia.config.MinIoProperties"
+    },
+    {
+      "name": "minio.secret-key",
+      "type": "java.lang.String",
+      "sourceType": "xyz.ring2.tutormedia.config.MinIoProperties"
+    }
+  ],
+  "hints": []
+}

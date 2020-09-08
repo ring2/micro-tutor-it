@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lz.read.dao.BookMapper">
+    <resultMap id="BaseResultMap" type="com.lz.read.pojo.Book">
+        <!--@mbg.generated generated on Wed Apr 01 23:55:30 CST 2020.-->
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="bookname" jdbcType="VARCHAR" property="bookname"/>
+        <result column="pictureurl" jdbcType="VARCHAR" property="pictureurl"/>
+        <result column="book_url" jdbcType="VARCHAR" property="bookUrl"/>
+        <result column="booktoken_id" jdbcType="VARCHAR" property="bookTokenId"/>
+        <result column="bookstate" jdbcType="CHAR" property="bookstate"/>
+        <result column="bookauthor" jdbcType="VARCHAR" property="bookauthor"/>
+        <result column="bookreadnum" jdbcType="INTEGER" property="bookreadnum"/>
+        <result column="bookcredit" jdbcType="INTEGER" property="bookcredit"/>
+        <result column="short_intro" jdbcType="VARCHAR" property="shortIntro"/>
+        <result column="book_press" jdbcType="VARCHAR" property="bookPress"/>
+        <result column="press_time" jdbcType="DATE" property="pressTime"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated generated on Wed Apr 01 23:55:30 CST 2020.-->
+        id, bookname, pictureurl，book_url，booktoken_id，bookstate, bookauthor, bookreadnum, bookcredit，short_intro，book_press，press_time
+    </sql>
+    <select id="selBookWithBookType" resultType="com.lz.read.pojo.vo.BookVo">
+        select book.*,booktype.bt_name btname from book,booktype
+        where book.book_type_id = booktype.id
+        <if test="bookname != null and bookname != ''">
+            and bookname like concat ('%',#{bookname},'%')
+        </if>
+    </select>
+    <select id="getNoReviewed" resultType="com.lz.read.pojo.vo.NoReviewedVO">
+        SELECT
+	u.username,
+	bookname,
+	bookauthor,
+	book_press,
+	press_time,
+	short_intro,
+	re_reason,
+	bt_name
+FROM
+	recommend r
+	JOIN book b ON r.re_status = 0 and r.re_bookid = b.id
+	JOIN `user` u ON r.re_readerid = u.userid
+	JOIN booktype type ON b.book_type_id = type.id;
+    </select>
+</mapper>

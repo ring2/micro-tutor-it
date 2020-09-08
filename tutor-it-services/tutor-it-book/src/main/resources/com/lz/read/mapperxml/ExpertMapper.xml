@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lz.read.dao.ExpertMapper">
+  <resultMap id="BaseResultMap" type="com.lz.read.pojo.Expert">
+    <!--@mbg.generated generated on Wed Apr 01 23:55:30 CST 2020.-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="ex_username" jdbcType="VARCHAR" property="exUsername" />
+    <result column="ex_pwd" jdbcType="VARCHAR" property="exPwd" />
+    <result column="ex_name" jdbcType="VARCHAR" property="exName" />
+    <result column="ex_phone" jdbcType="INTEGER" property="exPhone" />
+    <result column="ex_addr" jdbcType="VARCHAR" property="exAddr" />
+    <result column="ex_identity" jdbcType="INTEGER" property="exIdentity" />
+    <result column="company_address" jdbcType="VARCHAR" property="companyAddress" />
+    <result column="job_title" jdbcType="VARCHAR" property="jobTitle" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated generated on Wed Apr 01 23:55:30 CST 2020.-->
+    id, ex_username, ex_pwd, ex_name, ex_phone, ex_addr, ex_identity，company_address，job_title
+  </sql>
+    <select id="getExpertIds" resultType="java.lang.Integer">
+      select id from expert where expert.book_types like concat('%',#{btId} ,'%');
+    </select>
+</mapper>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lz.read.dao.QuestionMapper">
+  <resultMap id="BaseResultMap" type="com.lz.read.pojo.Question">
+    <!--@mbg.generated generated on Wed Apr 01 23:55:30 CST 2020.-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="que_title" jdbcType="VARCHAR" property="queTitle" />
+    <result column="que_direction" jdbcType="VARCHAR" property="queDirection" />
+    <result column="que_answer" jdbcType="TINYINT" property="queAnswer" />
+    <result column="que_paperid" jdbcType="INTEGER" property="quePaperid" />
+    <result column="que_topicid" jdbcType="INTEGER" property="queTopicid" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated generated on Wed Apr 01 23:55:30 CST 2020.-->
+    id, que_title, que_direction, que_answer, que_paperid, que_topicid
+  </sql>
+</mapper>

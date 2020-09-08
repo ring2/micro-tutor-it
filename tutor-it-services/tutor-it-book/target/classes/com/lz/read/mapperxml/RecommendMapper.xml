@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lz.read.dao.RecommendMapper">
+    <resultMap id="BaseResultMap" type="com.lz.read.pojo.Recommend">
+        <!--@mbg.generated generated on Wed Apr 01 23:55:30 CST 2020.-->
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="re_readerid" jdbcType="INTEGER" property="reReaderid"/>
+        <result column="re_bookid" jdbcType="INTEGER" property="reBookid"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated generated on Wed Apr 01 23:55:30 CST 2020.-->
+        id, re_readerid, re_bookid
+    </sql>
+	<!--读者推荐排行榜-->
+    <select id="getRankByRecommendNum" resultType="com.lz.read.pojo.vo.RecommendVo">
+     SELECT
+	recommend.*,
+	user.username bookname,
+	count( 1 ) rank
+FROM
+	recommend
+	JOIN book ON recommend.re_bookid = book.id
+	JOIN user on re_readerid = user.userid
+GROUP BY
+	recommend.re_bookid
+ORDER BY
+	rank DESC
+    </select>
+    <select id="getReviewed" resultType="com.lz.read.pojo.vo.ReviewedVO">
+        SELECT
+	username,
+	bookname,
+	re_result,
+	ex_name,
+	re_opinion,
+	re_reason,
+    re_readerid,
+	book.book_press,
+	book.press_time,
+	re_bookid,
+	short_intro,
+	recommend.id id
+FROM
+	recommend
+	JOIN expert ON recommend.re_status = 0
+	AND recommend.re_expertid = expert.id and expert.id = #{expertId}
+	JOIN `user` ON recommend.re_readerid = `user`.userid
+	JOIN book ON recommend.re_bookid = book.id
+    </select>
+    <select id="getReviewedBooks" resultType="com.lz.read.pojo.vo.ReviewedVO">
+        SELECT
+	u.username,
+	bookname,
+	bookauthor,
+	book_press,
+	press_time,
+	short_intro,
+	re_reason,
+	bt_name,
+	bookreadnum,
+	re_result,
+	re_opinion
+FROM
+	recommend r
+	JOIN book b ON (r.re_result = 1 or r.re_result = 0) and r.re_expertid = #{expertId} and r.re_bookid = b.id
+	JOIN `user` u ON r.re_readerid = u.userid
+	JOIN booktype type ON b.book_type_id = type.id;
+    </select>
+    <select id="getBookTypeIds" resultType="com.lz.read.pojo.po.RecommendBook">
+		select book_type_id bookTypeId,r.id from recommend r join book on r.re_status = 0 and r.re_expertid is null and r.re_bookid = book.id
+	</select>
+    <select id="getFinallyResult" resultType="java.lang.Integer">
+        select re_expertid expert_Id from recommend GROUP BY re_expertid HAVING re_expertid in
+        <foreach
+                collection="list" index="index" item="item" open="(" separator="," close=")">
+            #{item,jdbcType=INTEGER}
+        </foreach>
+        ORDER BY count(1) limit 1
+    </select>
+</mapper>

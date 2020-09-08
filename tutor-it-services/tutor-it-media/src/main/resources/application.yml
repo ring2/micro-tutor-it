@@ -1,0 +1,53 @@
+# spring boot admin 配置服务端地址及用户名密码
+spring:
+  boot:
+    admin:
+      client:
+        url: http://localhost:8769
+        instance:
+          service-url: http://localhost:${server.port}
+        username: user
+        password: 123456
+# 设置文件上传最大限制
+  servlet:
+    multipart:
+      max-file-size: 500MB
+      max-request-size: 500MB
+  management:
+    endpoints:
+      web:
+        exposure:
+          include: '*'
+    endpoint:
+      health:
+        show-details: ALWAYS
+  application:
+    name: tutor-media
+  data:
+    mongodb:
+      uri: mongodb://root:wqq123@localhost:27017
+      database: test
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 119.3.190.45:8848
+  redis:
+    host: ring2.xyz
+#mongodb
+# 单机模式 mongodb://name:pass@ip:port/database
+# 集群模式 mongodb://user:pwd@ip1:port1,ip2:port2/database
+
+server:
+  port: 8010
+media:
+  uploader:
+    path: D:\Temp\testuploader\
+  service:
+    ffmpeg:
+      path: D:\Temp\ffmpeg-20180227-fa0c9d6-win64-static\bin\ffmpeg.exe
+minio:
+  endpoint: http://119.3.190.45:9000
+  accessKey: minioadmin
+  secretkey: minioadmin
+  bucketName: media
+# 119.3.190.45

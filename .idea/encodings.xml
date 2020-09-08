@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/tutor-it-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tutor-it-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tutor-it-gateway/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tutor-it-monitor/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tutor-it-service-api/tutor-it-service-book-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tutor-it-service-api/tutor-it-service-order-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tutor-it-service-api/tutor-it-service-pay-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tutor-it-service-api/tutor-it-service-video-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tutor-it-services/tutor-it-book/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tutor-it-services/tutor-it-book/src/main/resources/application.yml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/tutor-it-services/tutor-it-core-recommend/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tutor-it-services/tutor-it-media/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tutor-it-services/tutor-it-order/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tutor-it-services/tutor-it-pay/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tutor-it-services/tutor-it-video/src/main/java" charset="UTF-8" />
+  </component>
+</project>

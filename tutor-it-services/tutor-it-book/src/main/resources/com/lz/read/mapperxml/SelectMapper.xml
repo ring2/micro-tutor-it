@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lz.read.dao.SelectMapper">
+  <resultMap id="BaseResultMap" type="com.lz.read.pojo.Select">
+    <!--@mbg.generated generated on Wed Apr 01 23:55:30 CST 2020.-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="sel_questionid" jdbcType="INTEGER" property="selQuestionid" />
+    <result column="sel_content" jdbcType="VARCHAR" property="selContent" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated generated on Wed Apr 01 23:55:30 CST 2020.-->
+    id, sel_questionid, sel_content
+  </sql>
+</mapper>

@@ -1,0 +1,11 @@
+{
+  "groups": [
+    {
+      "name": "jwt",
+      "type": "xyz.ring2.admin.security.jwt.JWTConfig",
+      "sourceType": "xyz.ring2.admin.security.jwt.JWTConfig"
+    }
+  ],
+  "properties": [],
+  "hints": []
+}

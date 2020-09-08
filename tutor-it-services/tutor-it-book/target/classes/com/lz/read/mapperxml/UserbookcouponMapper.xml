@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lz.read.dao.UserbookcouponMapper">
+  <resultMap id="BaseResultMap" type="com.lz.read.pojo.Userbookcoupon">
+    <!--@mbg.generated generated on Wed Apr 01 23:55:30 CST 2020.-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="uid" jdbcType="INTEGER" property="uid" />
+    <result column="dcid" jdbcType="INTEGER" property="dcid" />
+    <result column="udc_status" jdbcType="INTEGER" property="udcStatus" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated generated on Wed Apr 01 23:55:30 CST 2020.-->
+    id, `uid`, dcid, udc_status
+  </sql>
+</mapper>

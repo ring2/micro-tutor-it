@@ -1,0 +1,34 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: wqq123
+    url: jdbc:mysql://182.92.116.109:3306/readall?useSSL=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+  devtools:
+    restart:
+      enabled: true
+  redis:
+    host: ring2.xyz
+  cloud:
+    nacos:
+      discovery:
+        server-addr:
+server:
+  port: 8087
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+logging:
+  level:
+    com:
+      lz:
+        read:
+          dao: debug
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath*:com/lz/read/mapperxml/*.xml
+file:
+  url: E:\\micro-tutor-it\\tutor-it-services\\tutor-it-book\\src\\main\\resources\\static

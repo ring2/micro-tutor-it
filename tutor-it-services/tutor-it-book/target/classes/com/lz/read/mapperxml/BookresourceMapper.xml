@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lz.read.dao.BookresourceMapper">
+  <resultMap id="BaseResultMap" type="com.lz.read.pojo.Bookresource">
+    <!--@mbg.generated generated on Wed Apr 01 23:55:30 CST 2020.-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="rs_booktokenid" jdbcType="INTEGER" property="rsBooktokenid" />
+    <result column="rs_name" jdbcType="VARCHAR" property="rsName" />
+    <result column="rs_synopsis" jdbcType="VARCHAR" property="rsSynopsis" />
+    <result column="rs_amount" jdbcType="INTEGER" property="rsAmount" />
+    <result column="rs_type" jdbcType="VARCHAR" property="rsType" />
+    <result column="rs_charge" jdbcType="TINYINT" property="rsCharge" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated generated on Wed Apr 01 23:55:30 CST 2020.-->
+    id, rs_booktokenid, rs_name, rs_synopsis, rs_amount, rs_type, rs_charge
+  </sql>
+</mapper>

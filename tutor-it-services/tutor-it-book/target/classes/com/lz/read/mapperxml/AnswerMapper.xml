@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lz.read.dao.AnswerMapper">
+    <resultMap id="BaseResultMap" type="com.lz.read.pojo.Answer">
+        <!--@mbg.generated generated on Wed Apr 01 23:55:30 CST 2020.-->
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="ans_readerid" jdbcType="INTEGER" property="ansReaderid"/>
+        <result column="ans_selectid" jdbcType="INTEGER" property="ansSelectid"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated generated on Wed Apr 01 23:55:30 CST 2020.-->
+        id, ans_readerid, ans_selectid
+    </sql>
+    <select id="selAnswerSituation" resultType="com.lz.read.pojo.vo.AnswerSituationVo">
+      select q.id, q.que_direction question,count(*) peopleNum,AVG(a.ans_score) avg
+      ,MAX(a.ans_score) max,MIN(a.ans_score) min
+      from question q left join answer a on a.ans_questionid = q.id group by q.id
+    </select>
+</mapper>

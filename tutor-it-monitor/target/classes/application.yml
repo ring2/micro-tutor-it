@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: monitor-server
+  security:
+    user:
+      name: user
+      password: 123456
+  mail:
+    host: smtp.163.com
+    password: 15959901937wqq
+    username: ring2977@163.com
+  boot:
+    admin:
+      notify:
+        mail:
+          to: 1129486942@qq.com
+          from: ring2977@163.com
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.41.134:8848
+server:
+  port: 8769

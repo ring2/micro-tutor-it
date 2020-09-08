@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lz.read.dao.ChildMapper">
+  <resultMap id="BaseResultMap" type="com.lz.read.pojo.Child">
+    <!--@mbg.generated generated on Wed Apr 01 23:55:30 CST 2020.-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="parentid" jdbcType="INTEGER" property="parentid" />
+    <result column="childpassword" jdbcType="VARCHAR" property="childpassword" />
+    <result column="starttime" jdbcType="DATE" property="starttime" />
+    <result column="endtime" jdbcType="DATE" property="endtime" />
+    <result column="booktype" jdbcType="VARCHAR" property="booktype" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated generated on Wed Apr 01 23:55:30 CST 2020.-->
+    id, parentid, childpassword, starttime, endtime, booktype
+  </sql>
+</mapper>

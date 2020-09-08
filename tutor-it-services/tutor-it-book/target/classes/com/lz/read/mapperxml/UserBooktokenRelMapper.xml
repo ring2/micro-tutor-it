@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lz.read.dao.UserBooktokenRelMapper">
+  <resultMap id="BaseResultMap" type="com.lz.read.pojo.UserBooktokenRel">
+    <!--@mbg.generated generated on Thu Apr 02 08:02:37 CST 2020.-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="book_token_id" jdbcType="INTEGER" property="bookTokenId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated generated on Thu Apr 02 08:02:37 CST 2020.-->
+    id, user_id, book_token_id
+  </sql>
+</mapper>

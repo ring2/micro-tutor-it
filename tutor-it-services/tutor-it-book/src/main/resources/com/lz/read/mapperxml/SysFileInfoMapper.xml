@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lz.read.dao.SysFileInfoMapper">
+  <resultMap id="BaseResultMap" type="com.lz.read.pojo.SysFileInfo">
+    <!--@mbg.generated generated on Wed Apr 01 23:55:30 CST 2020.-->
+    <id column="file_id" jdbcType="VARCHAR" property="fileId" />
+    <result column="file_bucket" jdbcType="VARCHAR" property="fileBucket" />
+    <result column="file_name" jdbcType="VARCHAR" property="fileName" />
+    <result column="file_suffix" jdbcType="VARCHAR" property="fileSuffix" />
+    <result column="file_size_kb" jdbcType="BIGINT" property="fileSizeKb" />
+    <result column="final_name" jdbcType="VARCHAR" property="finalName" />
+    <result column="file_path" jdbcType="VARCHAR" property="filePath" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="create_user" jdbcType="BIGINT" property="createUser" />
+    <result column="update_user" jdbcType="BIGINT" property="updateUser" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated generated on Wed Apr 01 23:55:30 CST 2020.-->
+    file_id, file_bucket, file_name, file_suffix, file_size_kb, final_name, file_path, 
+    create_time, update_time, create_user, update_user
+  </sql>
+</mapper>

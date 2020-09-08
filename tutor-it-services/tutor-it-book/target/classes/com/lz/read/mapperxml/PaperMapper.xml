@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lz.read.dao.PaperMapper">
+  <resultMap id="BaseResultMap" type="com.lz.read.pojo.Paper">
+    <!--@mbg.generated generated on Wed Apr 01 23:55:30 CST 2020.-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="pa_title" jdbcType="VARCHAR" property="paTitle" />
+    <result column="pa_futitle" jdbcType="VARCHAR" property="paFutitle" />
+    <result column="pa_direction" jdbcType="VARCHAR" property="paDirection" />
+    <result column="pa_adddate" jdbcType="TIMESTAMP" property="paAdddate" />
+    <result column="pa_operatedate" jdbcType="TIMESTAMP" property="paOperatedate" />
+    <result column="pa_enddate" jdbcType="TIMESTAMP" property="paEnddate" />
+    <result column="pa_thankmsg" jdbcType="VARCHAR" property="paThankmsg" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated generated on Wed Apr 01 23:55:30 CST 2020.-->
+    id, pa_title, pa_futitle, pa_direction, pa_adddate, pa_operatedate, pa_enddate, pa_thankmsg
+  </sql>
+</mapper>
